@@ -1,0 +1,9 @@
+@import url("https://fonts.googleapis.com/css2?family=Gotu&display=swap");
+
+label {
+  display: inline-block;
+  width: 100px !important;
+}
+.song-input {
+  width: 27vw;
+}

@@ -1,0 +1,11 @@
+label
+{
+    display: block;
+}
+
+label span
+{
+    display: inline-block;
+    text-align: right;
+    width: 120px;
+}

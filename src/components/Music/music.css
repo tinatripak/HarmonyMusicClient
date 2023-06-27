@@ -1,0 +1,12 @@
+.play-icon {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  padding: 8px;
+  border-radius: 50%;
+  z-index: 1;
+}
+
+.icon {
+  fill: white;
+}
