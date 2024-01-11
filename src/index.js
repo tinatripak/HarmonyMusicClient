@@ -10,9 +10,11 @@ import reducer from "./Context/reducer";
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
-  <Router>
-    <StateProvider initialState={initialState} reducer={reducer}>
-      <App />
-    </StateProvider>
-  </Router>
+  <React.StrictMode>
+    <Router>
+      <StateProvider initialState={initialState} reducer={reducer}>
+        <App />
+      </StateProvider>
+    </Router>
+  </React.StrictMode>
 );
