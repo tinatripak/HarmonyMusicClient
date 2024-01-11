@@ -1,6 +1,6 @@
 import axios from "axios";
 
-const baseURL = "http://localhost:4000/";
+const baseURL = "https://harmony-music.onrender.com/";
 
 export const validateUser = async (token) => {
   try {
@@ -109,15 +109,6 @@ export const getAllSongsInAsc = async () => {
     return null;
   }
 };
-
-// export const getAllSongsInDesc = async () => {
-//   try {
-//     const res = await axios.get(`${baseURL}api/songs/getSongsInDesc`);
-//     return res.data;
-//   } catch (error) {
-//     return null;
-//   }
-// };
 
 export const getAllAlbums = async () => {
   try {
