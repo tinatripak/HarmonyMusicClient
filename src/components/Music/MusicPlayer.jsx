@@ -122,7 +122,6 @@ const MusicPlayer = ({ musics }) => {
             ref={audioRef}
           />
         </div>
-        {console.log({currentTime})}
         <div className="h-full flex items-center justify-center flex-col gap-3">
           <motion.i whileTap={{ scale: 0.8 }} onClick={closeMusicPlayer}>
             <IoMdClose className="text-textColor hover:text-headingColor text-2xl cursor-pointer" />

@@ -168,7 +168,6 @@ export const SongCard = ({ data, index }) => {
       });
   };
   const approveSuggestedSong = () => {
-    console.log("dfвавdf")
     const albumData = {
       name: data?.albumName,
       imageURL: data?.albumImage,

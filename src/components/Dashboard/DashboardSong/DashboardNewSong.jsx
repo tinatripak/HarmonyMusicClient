@@ -78,7 +78,6 @@ const DashboardNewSong = () => {
   useEffect(() => {
     if (artistFilter !== null) {
       getAlbumsBySinger(artistFilter).then((response) => {
-        console.log("qw", response.data);
         setAlbumsOfSinger(response.data);
       }).catch((error) => {
         console.error(error);
@@ -174,7 +173,6 @@ const DashboardNewSong = () => {
   const setAlbum = (name) => {
     setAlbumFlag(name);
     if (name === "Альбом") {
-      console.log("qwer", name);
       dispatch({ type: actionType.SET_ALBUM_FILTER, albumFilter: null });
     } else {
       dispatch({ type: actionType.SET_ALBUM_FILTER, albumFilter: name });

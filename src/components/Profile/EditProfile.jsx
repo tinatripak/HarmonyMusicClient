@@ -206,7 +206,6 @@ const EditProfile = () => {
                 alt="cover"
                 className="object-cover	w-225 h-225 mx-auto"
               />
-              {console.log(user?.user?.imageURL)}
               {user?.user?.imageURL && (
                 <div className="absolute top-0 left-0 right-0 bottom-0">
                   <div className="w-225 h-225 rounded-md border-2 border-dotted border-gray-300 cursor-pointer mx-auto">

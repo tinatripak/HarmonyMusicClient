@@ -7,7 +7,7 @@ export const validateUser = async (token) => {
     if(token){
       const res = await axios.get(`${baseURL}api/users/login`, {
         headers: {
-          Authorization: "Bearer " + token,
+          authorization: "Bearer " + token,
         },
       });
     return res.data;
@@ -20,7 +20,6 @@ export const validateUser = async (token) => {
 export const loginUser = async (token, email, password) => {
   try {
     if (token && email && password) {
-      console.log(email, password, token);
       const res = await axios.post(`${baseURL}api/users/loginEmail`, {
         email: email,
         password: password
@@ -197,9 +196,6 @@ export const getSuggestedSongs = async () => {
 export const saveNewSuggestedSong = async (data) => {
   try {
     if(data){
-      console.log('here', { ...data })
-      console.log(data)
-
       const res = await axios.post(`${baseURL}api/suggestedSongs/saveSuggestedSong`, { ...data });
 
       return res.data.song;
@@ -211,7 +207,6 @@ export const saveNewSuggestedSong = async (data) => {
 
 export const deleteSuggestedSongById = async (id) => {
   try {
-    console.log(id)
     if(id){
       const res = await axios.delete(`${baseURL}api/suggestedSongs/deleteSuggestedSongById/${id}`);
     return res;}
@@ -223,7 +218,6 @@ export const deleteSuggestedSongById = async (id) => {
 
 export const deleteSongById = async (id) => {
   try {
-    console.log(id)
     if(id){
       const res = await axios.delete(`${baseURL}api/songs/deleteSongById/${id}`);
     
@@ -292,7 +286,6 @@ export const deleteOneFromFavourites = async (_id, data) => {
 
 export const updateSingerById = async (userId, name, imageURL, twitter, instagram) => {
   try {
-    console.log(userId, name, imageURL, twitter, instagram)
     const res = await axios.put(`${baseURL}api/singers/updateSingerById/${userId}`, {
       data:{
         name: name,
@@ -320,7 +313,6 @@ export const updateSongById = async (userId, songArr) => {
 
 export const updateAlbumById = async (userId, name, imageURL, artist) => {
   try {
-    console.log(userId, name, imageURL, artist)
     const res = await axios.put(`${baseURL}api/albums/updateAlbumById/${userId}`, {
       data:{
         name: name,

@@ -18,7 +18,6 @@ const AlbumsBySinger = () => {
     async function fetchAlbums() {
       const response = await getAlbumsBySinger(name);
       setAlbums(response.data);
-      console.log(albums)
     }
     (async () => {
       try {

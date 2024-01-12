@@ -12,7 +12,6 @@ const FavoriteList = () => {
   const [{ user, isSongPlaying }, dispatch] = useStateValue();
 
   const fetchList = async () => {
-    console.log("2",user)
     
     if (user?.user?._id) {
       const response = await getFavourites(user?.user._id);
@@ -24,7 +23,6 @@ const FavoriteList = () => {
   useEffect(() => {
     (async () => {
       try {
-        console.log("1",user)
         await fetchList();
       } catch (error) {
         console.error(error);
