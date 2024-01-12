@@ -175,7 +175,6 @@ const DashboardEditSong = () => {
   const setAlbum = (name) => {
     setAlbumFlag(name);
     if (name === "Альбом") {
-      console.log("qwer", name);
       dispatch({ type: actionType.SET_ALBUM_FILTER, albumFilter: null });
     } else {
       dispatch({ type: actionType.SET_ALBUM_FILTER, albumFilter: name });

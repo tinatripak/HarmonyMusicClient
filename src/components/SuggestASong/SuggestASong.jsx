@@ -133,23 +133,6 @@ const SuggestASong = () => {
       setIsAudioLoading(true);
       setIsAlbum(true);
       setIsSinger(true);
-      console.log(
-        "front",
-        userName,
-        email,
-        songName,
-        songImageUrl,
-        audioAsset,
-        languageFilter,
-        filterTerm,
-        yearFilter,
-        albumName,
-        albumCoverImage,
-        singerName,
-        singerCoverImage,
-        twitter,
-        instagram
-      );
       const data = {
         userName: userName,
         email: email,
@@ -166,7 +149,6 @@ const SuggestASong = () => {
         albumName: albumName,
         albumImage: albumCoverImage,
       };
-      console.log(data);
       saveNewSuggestedSong(data)
         .then((res) => {
           getSuggestedSongs()

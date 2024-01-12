@@ -18,7 +18,6 @@ const SongsOfAlbum = () => {
     async function fetchAlbums() {
       try {
         const response = await getSongsByAlbum(name);
-        console.log(name);
         setSongs(response.data);
       } catch (error) {
         console.error(error);

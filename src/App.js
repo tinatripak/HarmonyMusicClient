@@ -35,7 +35,6 @@ const App = () => {
   const [isLoading, setIsLoading] = useState(false);
 
   const [, setAuth] = useState(false);
-  // console.log(user)
   useEffect(() => {
     firebaseAuth.onAuthStateChanged((userCred) => {
       if (userCred) {

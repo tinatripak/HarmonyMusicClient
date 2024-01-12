@@ -32,9 +32,8 @@ const Login = ({ setAuth }) => {
 
   const navigate = useNavigate();
   const [{ user }, dispatch] = useStateValue();
-
   const loginWithGoogle = async () => {
-    await signInWithPopup(firebaseAuth, provider).then((userCred) => {
+    await signInWithPopup(firebaseAuth, provider).then(() => {
       setAuth(true);
       firebaseAuth.onAuthStateChanged((userCred) => {
         if (userCred) {
@@ -68,7 +67,6 @@ const Login = ({ setAuth }) => {
     });
   };
   useEffect(() => {
-    console.log(user);
     if (user) {
       navigate("/home", { replace: true });
     }
@@ -102,7 +100,6 @@ const LoginForm = ({ click, setAuth }) => {
   const [{ user }, dispatch] = useStateValue();
 
   useEffect(() => {
-    console.log(user);
     if (user) {
       navigate("/home", { replace: true });
     }
